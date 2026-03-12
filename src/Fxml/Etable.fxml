@@ -1,14 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="$CONTROLLER_NAME$"
-            prefHeight="400.0" prefWidth="600.0" >
-
-</AnchorPane>
+<BorderPane fx:controller="Controller.EtableController" xmlns:fx="http://javafx.com/fxml/1">
+    <top>
+        <VBox alignment="CENTER" spacing="10" style="-fx-padding: 20;">
+            <Label text="🏡 MON ÉTABLE" style="-fx-font-size: 20; -fx-font-weight: bold;"/>
+        </VBox>
+    </top>
+    <center>
+        <GridPane fx:id="stableGrid" alignment="CENTER" hgap="10" vgap="10" />
+    </center>
+    <bottom>
+        <!-- fx:id corrigé : animalChoiceBox (cohérent avec EtableController) -->
+        <VBox alignment="CENTER" spacing="10" style="-fx-padding: 20;">
+            <ChoiceBox fx:id="animalChoiceBox" prefWidth="150.0" />
+            <Label fx:id="etableCowLabel"   text="Vaches : 0" />
+            <Label fx:id="etableSheepLabel" text="Moutons : 0" />
+            <Button text="Fermer" onAction="#closeWindow" />
+        </VBox>
+    </bottom>
+</BorderPane>

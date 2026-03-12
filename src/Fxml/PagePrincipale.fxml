@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="Controller.HarvestController">
+    <left>
+        <VBox alignment="TOP_CENTER" spacing="10" style="-fx-padding: 10; -fx-background-color: #e6e6e6;" prefWidth="170.0">
+            <Label fx:id="moneyLabel" text="500 €" style="-fx-font-size: 18; -fx-font-weight: bold;"/>
+
+            <Label text="--- CULTURES ---" style="-fx-font-weight: bold;"/>
+            <ChoiceBox fx:id="seedChoiceBox" prefWidth="150.0" />
+
+            <Separator />
+            <Button text="Boutique"       onAction="#openShop"   prefWidth="150.0" />
+            <Button text="Ouvrir l'Étable" onAction="#openEtable" prefWidth="150.0"
+                    style="-fx-background-color: #d35400; -fx-text-fill: white;" />
+            <Separator />
+            <Button text="💾 Sauvegarder" onAction="#saveGame"  prefWidth="150.0"
+                    style="-fx-background-color: #27ae60; -fx-text-fill: white;" />
+            <Button text="📂 Charger"     onAction="#loadGame"  prefWidth="150.0"
+                    style="-fx-background-color: #2980b9; -fx-text-fill: white;" />
+
+            <Separator />
+            <Label fx:id="wheatSeedLabel"  text="Graines Blé : 10" />
+            <Label fx:id="carrotSeedLabel" text="Graines Carotte : 5" />
+            <Label fx:id="wheatStockLabel" text="Stock Blé : 0" />
+            <Label fx:id="carrotStockLabel" text="Stock Carotte : 0" />
+            <Label fx:id="milkStockLabel"  text="Lait : 0" />
+            <Label fx:id="woolStockLabel"  text="Laine : 0" />
+        </VBox>
+    </left>
+    <center>
+        <GridPane fx:id="farmGrid" hgap="2" vgap="2" alignment="CENTER" />
+    </center>
+</BorderPane>
